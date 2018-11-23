@@ -60,7 +60,7 @@ public class Scaner extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textoResultado);
 
         barcodeDetector = new BarcodeDetector.Builder(this)
-                .setBarcodeFormats(Barcode.QR_CODE)
+                .setBarcodeFormats(Barcode.CODABAR)
                 .build();
 
         cameraSource = new CameraSource

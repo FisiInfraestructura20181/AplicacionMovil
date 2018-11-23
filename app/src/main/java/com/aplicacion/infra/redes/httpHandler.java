@@ -1,5 +1,7 @@
 package com.aplicacion.infra.redes;
 
+import android.os.StrictMode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +21,13 @@ public class httpHandler {
     public String post(String posturl){
 
         try {
-
+            StrictMode.enableDefaults();
             HttpClient httpclient = new DefaultHttpClient();
             /*Creamos el objeto de HttpClient que nos permitira conectarnos mediante peticiones http*/
             HttpPost httppost = new HttpPost(posturl);
             /*El objeto HttpPost permite que enviemos una peticion de tipo POST a una URL especificada*/
             //AÑADIR PARAMETROS
+            StrictMode.enableDefaults();
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("codigo","15200182"));
             params.add(new BasicNameValuePair("codigo","15200182"));
